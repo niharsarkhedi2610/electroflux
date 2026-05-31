@@ -1742,6 +1742,17 @@ footer {
     gap: 40px;
   }
 
+  .hero-image-wrapper {
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
+  }
+
+  .hero-glow-back {
+    width: 240px;
+    height: 240px;
+  }
+
   .hero-desc {
     margin-left: auto;
     margin-right: auto;
@@ -1789,6 +1800,14 @@ footer {
   .hero-title {
     font-size: 2.1rem;
     overflow-wrap: break-word;
+  }
+  .hero-image-wrapper {
+    width: 260px;
+    height: 260px;
+  }
+  .hero-glow-back {
+    width: 200px;
+    height: 200px;
   }
   .detail-title {
     font-size: 1.6rem;
