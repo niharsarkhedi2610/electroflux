@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Authentication | ElectroFlux</title>
+  <meta name="description" content="Sign in or register an account at ElectroFlux to complete checkouts, manage orders, and customize profiles.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Design Sheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+  <!-- Ambient background orb decoration -->
+  <div class="bg-ambient-layer">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-3"></div>
+  </div>
+
+  <!-- Navigation Bar (Simple compact version for auth page) -->
+  <header style="position: absolute; border: none; background: transparent;">
+    <div class="container nav-container" style="justify-content: flex-start;">
+      <a href="index.html" class="logo">
+        <i class="fas fa-bolt"></i> ElectroFlux <span class="logo-dot"></span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Centered Login/Signup Card Content -->
+  <main class="auth-layout" style="flex-grow: 1;">
+    <div class="glass-panel auth-card animate-slide-up">
+      <div class="auth-header">
+        <h1 class="auth-title">Welcome to ElectroFlux</h1>
+        <p class="auth-subtitle">Join the premium community of tech enthusiasts</p>
+      </div>
+
+      <!-- Tabs to toggle Login/Signup -->
+      <div class="auth-tabs" id="auth-tab-bar">
+        <button class="auth-tab-btn active" id="tab-login">Sign In</button>
+        <button class="auth-tab-btn" id="tab-signup">Register</button>
+      </div>
+
+      <!-- Auth Form Container -->
+      <div class="auth-form-container">
+        
+        <!-- LOGIN FORM -->
+        <form class="auth-form active" id="form-login">
+          <!-- Alert Box -->
+          <div class="form-alert" id="login-alert"></div>
+
+          <div class="input-group">
+            <label for="login-email" class="input-label">Email Address</label>
+            <div class="input-wrapper">
+              <input type="email" id="login-email" placeholder="name@example.com" class="input-field" required>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="login-password" class="input-label">Password</label>
+            <div class="input-wrapper">
+              <input type="password" id="login-password" placeholder="••••••••" class="input-field" required>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-glow auth-submit-btn" id="login-submit-btn">Sign In</button>
+        </form>
+
+        <!-- SIGNUP FORM -->
+        <form class="auth-form" id="form-signup">
+          <!-- Alert Box -->
+          <div class="form-alert" id="signup-alert"></div>
+
+          <div class="input-group">
+            <label for="signup-name" class="input-label">Full Name</label>
+            <div class="input-wrapper">
+              <input type="text" id="signup-name" placeholder="John Doe" class="input-field" required>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="signup-email" class="input-label">Email Address</label>
+            <div class="input-wrapper">
+              <input type="email" id="signup-email" placeholder="name@example.com" class="input-field" required>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="signup-password" class="input-label">Password (Min. 6 chars)</label>
+            <div class="input-wrapper">
+              <input type="password" id="signup-password" placeholder="••••••••" class="input-field" required>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="signup-confirm-password" class="input-label">Confirm Password</label>
+            <div class="input-wrapper">
+              <input type="password" id="signup-confirm-password" placeholder="••••••••" class="input-field" required>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-glow auth-submit-btn" id="signup-submit-btn">Create Account</button>
+        </form>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 24px;">
+        <a href="index.html" class="back-btn" style="margin-bottom:0; font-size:0.85rem;">
+          <i class="fas fa-home"></i> Return to Storefront
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Simple compact footer -->
+  <footer style="padding: 20px 0; background: rgba(11, 15, 26, 0.98);">
+    <div class="container" style="text-align: center;">
+      <p class="footer-copy" style="margin: 0;">&copy; 2026 ElectroFlux. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | ElectroFlux</title>
+  <meta name="description" content="View detailed product specifications, reviews, and highlights for high-performance electronic devices at ElectroFlux.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Design Sheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Floating Ambient background decoration -->
+  <div class="bg-ambient-layer">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="header-logo">
+        <i class="fas fa-bolt"></i> ElectroFlux <span class="logo-dot"></span>
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav>
+        <ul class="nav-menu" id="navigation-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index.html#shop-section" class="nav-link">Shop</a></li>
+          <li><a href="cart.html" class="nav-link">Cart</a></li>
+        </ul>
+      </nav>
+
+      <!-- Cart Actions -->
+      <div class="nav-actions">
+        <a href="cart.html" class="icon-btn" id="header-cart-btn" title="View Cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="icon-badge cart-count-badge" id="cart-badge-count">0</span>
+        </a>
+
+        <!-- Profile / Auth wrapper -->
+        <div id="auth-nav">
+          <a href="login.html" class="btn btn-secondary">Sign In</a>
+        </div>
+
+        <!-- Mobile toggle hamburger -->
+        <button class="mobile-nav-toggle" id="mobile-hamburger" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Detail Section -->
+  <main class="container product-detail-layout" id="product-detail-container">
+    <!-- Dynamic Content will be injected here by app.js -->
+    <!-- Loading spinner placeholder -->
+    <div style="text-align: center; padding: 100px 0;">
+      <i class="fas fa-circle-notch fa-spin" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
+      <p style="color: var(--text-secondary);">Retrieving device specifications from server...</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom: 8px;">
+            <i class="fas fa-bolt"></i> ElectroFlux
+          </a>
+          <p class="footer-desc">Premium grade electronic items, engineered for creators, gamers, and smart home enthusiasts.</p>
+          <div class="footer-socials">
+            <a href="#" class="icon-btn" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="icon-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Shop</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Audio</a></li>
+            <li><a href="index.html" class="footer-link">Wearables</a></li>
+            <li><a href="index.html" class="footer-link">Accessories</a></li>
+            <li><a href="index.html" class="footer-link">Displays</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Support</h3>
+          <ul class="footer-links">
+            <li><a href="delivery.html" class="footer-link">Verify Delivery</a></li>
+            <li><a href="#" class="footer-link">Returns & Refunds</a></li>
+            <li><a href="#" class="footer-link">Support Desk</a></li>
+            <li><a href="#" class="footer-link">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Contact</h3>
+          <ul class="footer-links">
+            <li class="footer-link"><i class="fas fa-envelope" style="margin-right: 8px;"></i> support@electroflux.com</li>
+            <li class="footer-link"><i class="fas fa-phone-alt" style="margin-right: 8px;"></i> +1 (800) 555-0199</li>
+            <li class="footer-link"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Silicon Valley, CA</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 ElectroFlux Inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-link" style="font-size: 0.8rem;">Privacy Policy</a>
+          <a href="#" class="footer-link" style="font-size: 0.8rem;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="js/app.js"></script>
+</body>
+</html>

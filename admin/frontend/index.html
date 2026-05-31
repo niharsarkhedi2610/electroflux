@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | ElectroFlux</title>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Styling Sheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient orb decorations -->
+  <div class="bg-ambient-layer">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+  </div>
+
+  <div class="dashboard-layout">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar glass-panel">
+      <div class="sidebar-brand">
+        <i class="fas fa-bolt"></i> ElectroFlux <span style="font-size:0.8rem; font-weight:700; color:var(--primary); margin-left:4px;">ADMIN</span>
+      </div>
+      
+      <nav class="sidebar-menu">
+        <a href="#dashboard" class="menu-link active" id="btn-nav-dashboard">
+          <i class="fas fa-chart-line"></i> Dashboard
+        </a>
+        <a href="#products" class="menu-link" id="btn-nav-products">
+          <i class="fas fa-box-open"></i> Manage Products
+        </a>
+        <a href="#orders" class="menu-link" id="btn-nav-orders">
+          <i class="fas fa-shipping-fast"></i> Manage Orders
+        </a>
+        <a href="#users" class="menu-link" id="btn-nav-users">
+          <i class="fas fa-users"></i> Users List
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="/" class="btn btn-secondary" style="width:100%; text-align:center;">
+          <i class="fas fa-external-link-alt"></i> Go to Shop
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- Top header bar -->
+      <header class="content-header glass-panel">
+        <h1 class="page-title" id="current-page-title">Dashboard Overview</h1>
+        <div class="admin-profile">
+          <i class="fas fa-user-shield"></i>
+          <span>Seller Admin</span>
+        </div>
+      </header>
+
+      <!-- VIEW: DASHBOARD -->
+      <section id="section-dashboard" class="dashboard-view active">
+        <!-- Stat Grid -->
+        <div class="stat-grid">
+          <div class="stat-card glass-panel animate-slide-up">
+            <div class="stat-icon-wrap" style="color:var(--success); background:rgba(34,197,94,0.1);"><i class="fas fa-wallet"></i></div>
+            <div class="stat-info">
+              <span class="stat-label">Total Revenue</span>
+              <h3 class="stat-value" id="stat-revenue">₹0</h3>
+            </div>
+          </div>
+
+          <div class="stat-card glass-panel animate-slide-up" style="animation-delay:0.05s;">
+            <div class="stat-icon-wrap" style="color:var(--primary); background:rgba(59,130,246,0.1);"><i class="fas fa-shopping-bag"></i></div>
+            <div class="stat-info">
+              <span class="stat-label">Total Orders</span>
+              <h3 class="stat-value" id="stat-orders">0</h3>
+            </div>
+          </div>
+
+          <div class="stat-card glass-panel animate-slide-up" style="animation-delay:0.1s;">
+            <div class="stat-icon-wrap" style="color:var(--hover-accent); background:rgba(96,165,250,0.1);"><i class="fas fa-boxes-stacked"></i></div>
+            <div class="stat-info">
+              <span class="stat-label">Products Active</span>
+              <h3 class="stat-value" id="stat-products">0</h3>
+            </div>
+          </div>
+
+          <div class="stat-card glass-panel animate-slide-up" style="animation-delay:0.15s;">
+            <div class="stat-icon-wrap" id="stat-low-stock-icon" style="color:var(--text-muted); background:rgba(255,255,255,0.05);"><i class="fas fa-triangle-exclamation"></i></div>
+            <div class="stat-info">
+              <span class="stat-label">Low Stock items</span>
+              <h3 class="stat-value" id="stat-low-stock">0</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Double Column Panels -->
+        <div class="details-grid animate-slide-up" style="animation-delay:0.2s;">
+          <!-- Recent Orders list -->
+          <div class="glass-panel detail-panel">
+            <h3 class="panel-title"><i class="fas fa-clock" style="margin-right:8px; color:var(--primary);"></i> Recent Orders</h3>
+            <div class="table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="dashboard-recent-orders-rows">
+                  <tr><td colspan="4" style="text-align:center; color:var(--text-muted);">No orders found</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Low Stock Items list -->
+          <div class="glass-panel detail-panel">
+            <h3 class="panel-title"><i class="fas fa-triangle-exclamation" style="margin-right:8px; color:var(--danger);"></i> Low Stock Alerts</h3>
+            <div class="table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Stock Left</th>
+                  </tr>
+                </thead>
+                <tbody id="dashboard-low-stock-rows">
+                  <tr><td colspan="3" style="text-align:center; color:var(--text-muted);">All product stock levels healthy</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW: PRODUCTS -->
+      <section id="section-products" class="dashboard-view">
+        <div class="table-actions">
+          <button class="btn btn-primary" id="btn-open-add-product"><i class="fas fa-plus"></i> Add New Product</button>
+        </div>
+
+        <!-- Products table list -->
+        <div class="glass-panel detail-panel animate-slide-up">
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Product Name</th>
+                  <th>Category</th>
+                  <th>Price</th>
+                  <th>Stock</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="admin-products-rows">
+                <tr><td colspan="6" style="text-align:center; color:var(--text-muted);">Loading products...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW: ORDERS -->
+      <section id="section-orders" class="dashboard-view">
+        <div class="glass-panel detail-panel animate-slide-up">
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Date</th>
+                  <th>Customer Email</th>
+                  <th>Total Amount</th>
+                  <th>Status</th>
+                  <th>Package QR</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="admin-orders-rows">
+                <tr><td colspan="6" style="text-align:center; color:var(--text-muted);">Loading orders...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW: USERS -->
+      <section id="section-users" class="dashboard-view">
+        <div class="glass-panel detail-panel animate-slide-up">
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>User ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Created On</th>
+                </tr>
+              </thead>
+              <tbody id="admin-users-rows">
+                <tr><td colspan="4" style="text-align:center; color:var(--text-muted);">Loading user registrations...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- MODAL: ADD / EDIT PRODUCT -->
+  <div id="product-modal" class="modal-overlay">
+    <div class="glass-panel modal-card">
+      <div class="modal-header">
+        <h3 id="modal-title">Add New Store Product</h3>
+        <button id="btn-close-modal" class="icon-btn"><i class="fas fa-times"></i></button>
+      </div>
+      <form id="product-form" class="modal-form">
+        <input type="hidden" id="form-product-id">
+        
+        <div class="input-group">
+          <label class="input-label">Product Title</label>
+          <input type="text" id="prod-name" class="input-field" placeholder="e.g. CyberBlast Gaming Keyboard" required>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+          <div class="input-group">
+            <label class="input-label">Category</label>
+            <select id="prod-category" class="input-field" required>
+              <option value="Audio">Audio</option>
+              <option value="Wearables">Wearables</option>
+              <option value="Accessories">Accessories</option>
+              <option value="Displays">Displays</option>
+              <option value="Smart Home">Smart Home</option>
+              <option value="Photography">Photography</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label class="input-label">Stock Quantity</label>
+            <input type="number" id="prod-stock" class="input-field" min="0" placeholder="e.g. 20" required>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+          <div class="input-group">
+            <label class="input-label">Price (in INR ₹)</label>
+            <input type="number" id="prod-price" class="input-field" min="1" placeholder="e.g. 4500" required>
+          </div>
+          <div class="input-group">
+            <label class="input-label">Product Image Path</label>
+            <input type="text" id="prod-image" class="input-field" placeholder="e.g. assets/keyboard.png" value="assets/headphones.png">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Short Description</label>
+          <textarea id="prod-description" class="input-field" rows="3" placeholder="Explain the key details of the electronic gear..." required></textarea>
+        </div>
+
+        <div style="display:flex; gap:16px; margin-top: 10px;">
+          <button type="button" class="btn btn-secondary" id="btn-cancel-modal" style="flex:1;">Cancel</button>
+          <button type="submit" class="btn btn-primary btn-glow" id="btn-submit-modal" style="flex:1.5;">Save Product</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Application Logic -->
+  <script src="js/app.js"></script>
+</body>
+</html>
