@@ -228,6 +228,7 @@ header.scrolled {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-shrink: 0;
 }
 
 .logo-dot {
@@ -279,6 +280,14 @@ header.scrolled {
   gap: 16px;
 }
 
+/* Desktop Search bar wrapper */
+.desktop-search {
+  position: relative;
+  max-width: 180px;
+  width: 100%;
+  flex-shrink: 1;
+}
+
 /* Icon Button styling */
 .icon-btn {
   background: rgba(255, 255, 255, 0.05);
@@ -294,6 +303,7 @@ header.scrolled {
   position: relative;
   transition: var(--transition-smooth);
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .icon-btn i {
@@ -456,6 +466,7 @@ header.scrolled {
   border: none;
   color: var(--text-primary);
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 /* Hero Section */
