@@ -108,7 +108,7 @@ function updateAuthUI() {
     authNav.innerHTML = `
       <div class="user-profile-menu">
         <button class="icon-btn" id="profile-menu-btn" title="Profile">
-          <i class="fas fa-user-circle" style="font-size: 1.3rem;"></i>
+          <i class="fas fa-user-circle"></i>
         </button>
         <div class="profile-dropdown glass-panel" id="profile-dropdown">
           <div class="dropdown-header">
@@ -774,7 +774,7 @@ function renderCart() {
           <i class="fas fa-truck" style="color: var(--primary);"></i> Shipping Details
         </h2>
         <form id="checkout-form" style="display: flex; flex-direction: column; gap: 20px;">
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-grid-2">
             <div class="input-group">
               <label class="input-label">Full Name</label>
               <input type="text" id="ship-name" class="input-field" value="${state.user.name}" required>
@@ -790,7 +790,7 @@ function renderCart() {
             <input type="text" id="ship-address" class="input-field" placeholder="Flat/House no., Floor, Street name" required>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 16px;">
+          <div class="form-grid-3">
             <div class="input-group">
               <label class="input-label">City</label>
               <input type="text" id="ship-city" class="input-field" placeholder="e.g. Mumbai" required>
@@ -853,7 +853,7 @@ function renderCart() {
                 <label class="input-label">Card Number</label>
                 <input type="text" id="card-number" class="input-field" placeholder="16-digit card number" pattern="[0-9]{16}">
               </div>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-grid-2">
                 <div class="input-group">
                   <label class="input-label">Expiry Date</label>
                   <input type="text" id="card-expiry" class="input-field" placeholder="MM/YY">

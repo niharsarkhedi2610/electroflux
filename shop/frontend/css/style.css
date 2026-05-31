@@ -296,6 +296,23 @@ header.scrolled {
   text-decoration: none;
 }
 
+.icon-btn i {
+  font-size: 1.25rem;
+}
+
+/* Form Grid Helpers for Mobile Responsiveness */
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-grid-3 {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 16px;
+}
+
 .icon-btn:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: var(--primary);
@@ -1676,6 +1693,19 @@ footer {
     display: block;
   }
 
+  /* Hide header search on tablet/mobile to save space */
+  .desktop-search {
+    display: none !important;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
   .nav-menu {
     position: fixed;
     top: var(--header-height);
@@ -1719,6 +1749,10 @@ footer {
     top: 0;
   }
 
+  .detail-title {
+    font-size: 2rem;
+  }
+
   .cart-grid {
     grid-template-columns: 1fr;
   }
@@ -1742,7 +1776,11 @@ footer {
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
+    overflow-wrap: break-word;
+  }
+  .detail-title {
+    font-size: 1.6rem;
   }
   .footer-grid {
     grid-template-columns: 1fr;
@@ -1752,6 +1790,10 @@ footer {
   }
   .qty-add-row {
     flex-direction: column;
+  }
+  /* Single-column checkout form layouts on mobile */
+  .form-grid-2, .form-grid-3 {
+    grid-template-columns: 1fr !important;
   }
   .cart-item {
     grid-template-columns: 60px 1fr;
