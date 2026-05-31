@@ -215,6 +215,110 @@ const initialData = {
       rating: 4.9,
       reviewsCount: 53,
       stock: 4
+    },
+    {
+      id: "9",
+      name: "AeroBuds Pro Wireless Earbuds",
+      category: "Audio",
+      price: 8999,
+      image: "assets/headphones.png",
+      description: "Ultra-compact active noise cancelling wireless earbuds with high-fidelity sound, secure custom fit, and sweat-resistant protection. Includes a smart charging case with quick wireless charge capabilities.",
+      specs: {
+        "Driver Size": "11mm Dynamic",
+        "Battery Life": "Up to 30 Hours (with Case)",
+        "Bluetooth Version": "5.3 (LE Audio)",
+        "Water Resistance": "IPX4 Sweatproof",
+        "ANC": "Active Noise Cancellation",
+        "Charging Port": "Wireless + USB-C"
+      },
+      features: [
+        "Smart Active Noise Cancellation adapts to external environments",
+        "Dual-beamforming microphones for crystal-clear hands-free calls",
+        "Touch controls on both earbuds for volume, play, and calls",
+        "Ultra-light ergonomic ear tips in 3 sizes for all-day comfort",
+        "10-min charge provides up to 2 hours of audio listening"
+      ],
+      rating: 4.6,
+      reviewsCount: 231,
+      stock: 35
+    },
+    {
+      id: "10",
+      name: "Lumina RGB Smart LED Panel",
+      category: "Smart Home",
+      price: 7999,
+      image: "assets/smartdisplay.png",
+      description: "Modular smart light panels featuring over 16 million colors, custom animations, and rhythmic music syncing capabilities. Syncs with smart home devices to create immersive ambient lighting environments.",
+      specs: {
+        "Color Palette": "16M+ Colors",
+        "Max Brightness": "80 Lumens per panel",
+        "Connectivity": "Wi-Fi (2.4 GHz) + Bluetooth",
+        "Control Modes": "App, Voice, Physical Remote",
+        "Integration": "Google Home, Alexa, Apple HomeKit",
+        "Power Supply": "24W Power Adapter"
+      },
+      features: [
+        "Interactive music visualizer transforms beats into light animations",
+        "Modular layout lets you design custom shapes on your wall",
+        "Scheduling and smart scenes to match your morning and night routines",
+        "Rich HSL color settings with smooth gradient transitions",
+        "Simple peel-and-stick mounting tape installation included"
+      ],
+      rating: 4.5,
+      reviewsCount: 64,
+      stock: 18
+    },
+    {
+      id: "11",
+      name: "Quantum VR Quest Headset",
+      category: "Wearables",
+      price: 34999,
+      image: "assets/smartwatch.png",
+      description: "All-in-one standalone virtual reality headset featuring high-resolution lenses, integrated positional audio, and intuitive hand tracking. Dive into gaming, virtual meetups, and immersive entertainment.",
+      specs: {
+        "Display Type": "Dual LCD Panels (Fast-switch)",
+        "Resolution": "1832 x 1920 per eye",
+        "Refresh Rate": "90Hz - 120Hz supported",
+        "Storage Capacity": "128GB High-Speed Flash",
+        "Processor": "Qualcomm Snapdragon XR2 Gen 1",
+        "Tracking": "Inside-out 6DoF tracking"
+      },
+      features: [
+        "Standalone wireless headset — no PC or external cables required",
+        "Vibrant 3D cinematic audio directly built into the strap",
+        "Dual touch controllers with advanced haptic feedback responses",
+        "Guardian boundary setup prevents collisions with furniture",
+        "Link option to connect to gaming PC for advanced VR library"
+      ],
+      rating: 4.8,
+      reviewsCount: 154,
+      stock: 10
+    },
+    {
+      id: "12",
+      name: "Nomad Multi-Charge Pad",
+      category: "Accessories",
+      price: 4499,
+      image: "assets/mouse.png",
+      description: "Premium magnetic wireless charging pad that charges up to three devices simultaneously. Features a sleek leather top surface, anti-slip rubber feet, and fast-charge technology.",
+      specs: {
+        "Total Output": "30W Max (15W wireless per coil)",
+        "Materials": "Aircraft Aluminum & Premium Leather",
+        "Dimensions": "20cm x 10cm x 1.2cm",
+        "Coil Count": "3 Overlapping Qi Coils",
+        "Power Input": "USB-C PD Adapter (30W)",
+        "Compatible Devices": "Smartphones, Earbuds, Smartwatches"
+      },
+      features: [
+        "Charges your phone, smartwatch, and wireless earbuds all at once",
+        "Overlapping multi-coil alignment allows drop-and-go placement",
+        "Sleek aerospace-grade aluminum base with premium padded leather",
+        "Built-in temperature control and foreign object detection safeguards",
+        "Includes a premium 1.5m braided USB-C power cord"
+      ],
+      rating: 4.7,
+      reviewsCount: 89,
+      stock: 22
     }
   ]
 };
