@@ -1827,6 +1827,9 @@ footer {
   .qty-add-row {
     flex-direction: column;
   }
+  .qty-selector {
+    align-self: flex-start;
+  }
   /* Single-column checkout form layouts on mobile */
   .form-grid-2, .form-grid-3 {
     grid-template-columns: 1fr !important;
